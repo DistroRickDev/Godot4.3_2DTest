@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4r024teswgol"]
+
+[ext_resource type="Script" path="res://Scripts/TestMainChar2D.gd" id="1_42qaq"]
+[ext_resource type="SpriteFrames" uid="uid://cfxmxubwjcpjp" path="res://Resources/TestMainCharAnimatedSprites.tres" id="1_ii8as"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ot43"]
+size = Vector2(54, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwyok"]
+size = Vector2(89, 58.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_42qaq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_ii8as")
+animation = &"SideAttackLight"
+frame = 5
+frame_progress = 1.0
+
+[node name="IdleRunCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -4.5)
+shape = SubResource("RectangleShape2D_0ot43")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(25.5, 2.25)
+shape = SubResource("RectangleShape2D_uwyok")
+disabled = true
+debug_color = Color(0.886949, 0, 0.482943, 0.42)
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

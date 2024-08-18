@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://3p8t3fcd4gt7"]
+
+[ext_resource type="Script" path="res://Scripts/TestEnemy.gd" id="1_4g8ui"]
+[ext_resource type="SpriteFrames" uid="uid://jd0ahclkqkik" path="res://Resources/TesEnemyAnimatedSprites.tres" id="1_l41cs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rauun"]
+size = Vector2(47, 58.5)
+
+[node name="TestEnemy" type="CharacterBody2D"]
+script = ExtResource("1_4g8ui")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_l41cs")
+animation = &"Idle"
+
+[node name="IdleRunCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, 3.25)
+shape = SubResource("RectangleShape2D_rauun")
