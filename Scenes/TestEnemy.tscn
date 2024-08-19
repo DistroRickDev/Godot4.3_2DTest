@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rauun"]
 size = Vector2(47, 58.5)
 
-[node name="TestEnemy" type="CharacterBody2D"]
+[node name="TestEnemy" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_4g8ui")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -16,3 +16,7 @@ animation = &"Idle"
 [node name="IdleRunCollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3.5, 3.25)
 shape = SubResource("RectangleShape2D_rauun")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = -1.5708
+target_position = Vector2(0, 80)

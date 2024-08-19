@@ -2,16 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://bi0v468lx5l0c" path="res://Assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="1_q47kj"]
 [ext_resource type="Texture2D" uid="uid://xwtnkn50pnyp" path="res://Assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_udrmv"]
+[ext_resource type="Texture2D" uid="uid://bt27dsqxlu7df" path="res://Assets/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="1_xhv5d"]
 [ext_resource type="Texture2D" uid="uid://snpyhcy0hhpt" path="res://Assets/Tiny Swords (Update 010)/Terrain/Bridge/Bridge_All.png" id="2_mxdn5"]
 [ext_resource type="Texture2D" uid="uid://cxfdjtraes2gh" path="res://Assets/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="5_qei30"]
-[ext_resource type="Texture2D" uid="uid://bt27dsqxlu7df" path="res://Assets/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="5_rnbe5"]
 [ext_resource type="Texture2D" uid="uid://4hja4ruja0o" path="res://Assets/Tiny Swords (Update 010)/Resources/Trees/Tree.png" id="6_yp770"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsi3x"]
-texture = ExtResource("5_rnbe5")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l8yky"]
+texture = ExtResource("1_xhv5d")
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlu0b"]
 texture = ExtResource("1_udrmv")
@@ -1178,4 +1176,4 @@ sources/2 = SubResource("TileSetAtlasSource_x8giq")
 sources/3 = SubResource("TileSetAtlasSource_r8y8b")
 sources/8 = SubResource("TileSetAtlasSource_tacmt")
 sources/7 = SubResource("TileSetAtlasSource_hb5u7")
-sources/0 = SubResource("TileSetAtlasSource_wsi3x")
+sources/0 = SubResource("TileSetAtlasSource_l8yky")
